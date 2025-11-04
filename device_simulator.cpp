@@ -9,9 +9,9 @@ int main() {
     std::cout << "=== Embedded Diagnostics System Boot ===" << std::endl;
 
     while (true) {
-        int temp = std::rand() % 100;       // Fake temperature sensor
-        int voltage = 3000 + std::rand() % 500; // mV
-        bool fault = (std::rand() % 20 == 0);   // Random fault 5% of the time
+        int temp = std::rand() % 100;   
+        int voltage = 3000 + std::rand() % 500; 
+        bool fault = (std::rand() % 20 == 0);
 
         std::cout << "[DATA] TEMP=" << temp 
                   << "C | VOLT=" << voltage 
