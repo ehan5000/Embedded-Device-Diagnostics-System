@@ -7,6 +7,10 @@ app = Flask(__name__)
 # Simulated device data (would normally come from serial or MQTT)
 device_state = {"temp": 0, "voltage": 0, "status": "OK"}
 
+@app.route('/data')
+def data():
+    return jsonify(device_state)
+
 @app.route('/')
 def dashboard():
     html = """
